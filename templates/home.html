@@ -1,0 +1,53 @@
+<!-- in text_reverser/templates/text_reverser/reverse_text.html -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+  
+  
+  
+<div class="container mt-5">
+  <div class="card text-center mb- 3">
+    <div class="card-header">
+  <form method="post">
+    {% csrf_token %}
+    <h3>Reverse Text</h3>
+    <textarea class="form-control" name="text" id="text" rows="3"  placeholder="Enter your text here"></textarea>
+    <button type="submit" class="btn btn-success badge-pill mt-3">Analyze</button>
+  </form>
+    </div>
+    <div class="card-body m-3">
+      <h5 class="card-title mb-3">Text Result Manager</h5>
+
+      <table class="table mt-2">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Sr.No</th>
+            <th scope="col">Original text</th>
+            <th scope="col">Reversed text</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          {% for text in reverse_text %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{text.original_text}}</td>
+            <td>{{text.reversed_text}}</td>
+            <td><a href="/delete_text/{{text.id}}" class="btn btn-danger badge-pill btn active" role="button" aria-pressed="true">Delete</a>
+
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+    <div class="card-footer text-muted">
+      The Text reverser App
+    </div>
+  </div>
+  
+</div>
+{% endblock %}
