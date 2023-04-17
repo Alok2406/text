@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*$(k*tf*z1$x_l_e(fvfv_o^m-hg1wih@*%_=)qrav5!5@k8cg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aloktext.up.railway.app']
+ALLOWED_HOSTS = ['text.up.railway.app']
 
 CSRF_TRUSTED_ORIGINS = ['text.up.railway.app']
 # Application definition
