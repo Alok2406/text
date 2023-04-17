@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-*$(k*tf*z1$x_l_e(fvfv_o^m-hg1wih@*%_=)qrav5!5@k8cg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aloktext.up.railway.app']
 
-
+CSRF_TRUSTED_ORIGINS = ['aloktext.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -69,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'reverse.wsgi.application'
-
+CSRF_TRUSTED_ORIGINS = ['example.com']
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
