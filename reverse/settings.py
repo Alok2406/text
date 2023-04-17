@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['aloktext.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['aloktext.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['text.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
@@ -70,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'reverse.wsgi.application'
-CSRF_TRUSTED_ORIGINS = ['example.com']
+CSRF_TRUSTED_ORIGINS = ['text.up.railway.app']
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
