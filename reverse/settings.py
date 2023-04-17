@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-*$(k*tf*z1$x_l_e(fvfv_o^m-hg1wih@*%_=)qrav5!5@k8cg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['text.up.railway.app']
+ALLOWED_HOSTS = ['https://text.up.railway.app/']
 
-CSRF_TRUSTED_ORIGINS = ['text.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://text.up.railway.app/']
 # Application definition
 
 INSTALLED_APPS = [
@@ -70,7 +70,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'reverse.wsgi.application'
-CSRF_TRUSTED_ORIGINS = ['text.up.railway.app']
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
