@@ -18,5 +18,7 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+#"config": {"distDir": "staticfiles_build"}
+
 if __name__ == '__main__':
     main()
