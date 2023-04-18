@@ -3,9 +3,8 @@
     "builds": [
         {
         "src": "reverse/wsgi.py",
-
         "use": "@vercel/python",
-        "config": {"maxLambdaSize": "15mb","runtime": "python3.8.10" }
+        "config": {"maxLambdaSize": "15mb","runtime": "python3.8" }
         },
         {
         "src": "build_files.sh",
@@ -21,7 +20,7 @@
             },
             {
             "src": "/(.*)",
-            "dest" : "poll/wsgi.py"
+            "dest" : "reverse/wsgi.py"
             }
     ]
 }
